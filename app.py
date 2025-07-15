@@ -19,7 +19,7 @@ def process_file(input_file, mapping_df):
     input_df = pd.read_excel(input_file)
     wb = openpyxl.load_workbook(TEMPLATE_PATH)
     ws_values = wb["Values"]
-    ws_type = wb["Type"]
+    ws_type = wb["Types"]
 
     # --- Step 1: Fill "Values" tab ---
     for i, row in enumerate(input_df.itertuples(index=False), start=2):
